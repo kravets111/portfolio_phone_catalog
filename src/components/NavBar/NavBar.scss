@@ -4,6 +4,8 @@
   grid-row: 2;
   grid-column: 1 / 5;
 
+  height: 100%;
+
   @include on-desktop {
     grid-row: 1;
     grid-column: 2 / 12;
@@ -71,7 +73,7 @@
       }
 
       @include on-desktop {
-        padding-block: 24px;
+        padding-block: 22px;
       }
 
       &::after {

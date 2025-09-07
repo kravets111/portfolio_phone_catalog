@@ -44,6 +44,7 @@
       color: $color-secondary;
       font-weight: 600;
       text-transform: capitalize;
+      line-height: 20px;
 
       overflow: hidden;
       white-space: nowrap;
@@ -72,6 +73,7 @@
     &--back {
       text-decoration: none;
       color: $color-secondary;
+      line-height: 20px;
 
       &:hover {
         color: $color-primary;

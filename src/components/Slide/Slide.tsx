@@ -27,7 +27,12 @@ export const Slide: React.FC<Props> = ({
       </div>
 
       <div className="slide__image">
-        <img src={image} alt="slider-img" className="slide__image-phone" />
+        <img
+          src={image}
+          alt="slider-img"
+          className="slide__image-phone"
+          loading="lazy"
+        />
       </div>
     </div>
   );

@@ -164,6 +164,7 @@ export const ProductDetails = () => {
                     src={device.images[selectImage]}
                     alt={device.name}
                     className="product-details__main-image--general"
+                    loading="lazy"
                   />
 
                   <div className="product-details__main-image--block">
@@ -177,12 +178,13 @@ export const ProductDetails = () => {
                         src={image}
                         alt={`${device.name} ${index}`}
                         onClick={() => setSelectImage(index)}
+                        loading="lazy"
                       />
                     ))}
                   </div>
                 </>
               ) : (
-                <img src={device.image} alt={device.name} />
+                <img src={device.image} alt={device.name} loading="lazy" />
               )}
             </div>
 

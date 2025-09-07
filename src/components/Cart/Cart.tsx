@@ -60,6 +60,7 @@ export const Cart = () => {
                     src={item.image}
                     alt={item.name}
                     className="cart__item-image"
+                    loading="lazy"
                   />
 
                   <h3 className="cart__item-title text text__body">
