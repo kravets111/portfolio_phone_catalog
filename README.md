@@ -8,4 +8,4 @@ To use this template click `Use this template`
 
 `SCSS Preprocessor` - available to write your styles with modern style language
 
-[DEMO LINK](https://github.com/kravets111/portfolio_phone_catalog/)
+[DEMO LINK](https://kravets111.github.io/portfolio_phone_catalog/)
