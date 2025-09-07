@@ -1,3 +1,15 @@
-.starter {
-  font-size: 18px;
+@use './styles/utils/' as *;
+@use './styles/blocks/page';
+@use './styles/blocks/icon';
+@use './styles/blocks/text';
+@use './styles//blocks/fonts.scss';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__main {
+    flex-grow: 1;
+  }
 }
