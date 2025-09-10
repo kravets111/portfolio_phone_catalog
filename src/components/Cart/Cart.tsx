@@ -39,6 +39,7 @@ export const Cart = () => {
                 type="button"
                 className="cart__top-button--back text__body"
                 onClick={() => navigate(-1)}
+                aria-label="Back"
               >
                 Back
               </button>
@@ -54,6 +55,7 @@ export const Cart = () => {
                   <button
                     className="cart__item-remove icon icon--cross"
                     onClick={() => removeFromCart(item.id)}
+                    aria-label="Remove"
                   ></button>
 
                   <img
@@ -77,6 +79,7 @@ export const Cart = () => {
                       )}
                       onClick={() => decreaseQuantity(item.id)}
                       disabled={item.quantity <= 1}
+                      aria-label="Quantity minus"
                     ></button>
 
                     <span className="cart__item-quantity--value text text__body">
@@ -86,6 +89,7 @@ export const Cart = () => {
                     <button
                       className="cart__item-quantity--button text icon icon--plus"
                       onClick={() => increaseQuantity(item.id)}
+                      aria-label="Quantity plus"
                     ></button>
                   </div>
 
@@ -113,6 +117,7 @@ export const Cart = () => {
             <button
               className="cart__total-bottom--checkout text text__body--buttons"
               onClick={clearCart}
+              aria-label="Clear"
             >
               Checkout
             </button>

@@ -23,7 +23,9 @@ export const Slide: React.FC<Props> = ({
           <p className="slide__content-text--description">{description}</p>
         </div>
 
-        <button className="slide__content-button">order now</button>
+        <button className="slide__content-button" aria-label="Order">
+          order now
+        </button>
       </div>
 
       <div className="slide__image">

@@ -14,19 +14,28 @@ export const Footer = () => {
               className="text__body--uppercase nav__link"
               target="_blank"
               rel="noreferrer"
+              aria-label="Github"
             >
               Github
             </Link>
           </li>
 
           <li className="footer__nav-list--item">
-            <Link to="#" className="text__body--uppercase nav__link">
+            <Link
+              to="#"
+              className="text__body--uppercase nav__link"
+              aria-label="Contants"
+            >
               Contacts
             </Link>
           </li>
 
           <li className="footer__nav-list--item">
-            <Link to="#" className="text__body--uppercase nav__link">
+            <Link
+              to="#"
+              className="text__body--uppercase nav__link"
+              aria-label="Rights"
+            >
               rights
             </Link>
           </li>
@@ -44,6 +53,7 @@ export const Footer = () => {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
+          aria-label="Button top"
         ></button>
       </div>
     </footer>

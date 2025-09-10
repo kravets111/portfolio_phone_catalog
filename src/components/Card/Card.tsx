@@ -47,7 +47,7 @@ export const Card: React.FC<Props> = ({
 
   return (
     <div className="card">
-      <Link className="card__top" to={`/${category}/${id}`}>
+      <Link className="card__top" to={`/${category}/${id}`} aria-label="Card">
         <img src={image} alt={name} className="card__top-img" loading="lazy" />
 
         <div className="card__top-text">

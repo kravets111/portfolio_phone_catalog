@@ -104,11 +104,17 @@
       font-size: 8px;
       font-weight: 400;
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
 
       @include on-desktop {
         padding-inline: 50px;
         padding-block: 18px;
         font-size: 18px;
+      }
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-primary;
       }
     }
   }

@@ -56,6 +56,7 @@ export const Select: React.FC<Props> = ({
           'select__button--open': isOpen,
         })}
         onClick={toggleDropdown}
+        aria-label="Select"
       >
         {options.find(option => option.value === selectedValue)?.label}
       </button>

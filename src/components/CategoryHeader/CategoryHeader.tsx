@@ -25,6 +25,7 @@ export const CategoryHeader: React.FC<Props> = ({
         <Link
           to="/"
           className="icon icon--home category-header__link-home"
+          aria-label="Home"
         ></Link>
 
         <span className="category-header__link--arrow"></span>
@@ -39,6 +40,7 @@ export const CategoryHeader: React.FC<Props> = ({
                 location.pathname.split('/').length > 2 && categoryTitle,
             },
           )}
+          aria-label="Category"
         >
           {category}
         </Link>
@@ -49,6 +51,7 @@ export const CategoryHeader: React.FC<Props> = ({
             <Link
               to={`/${categoryTitle}`}
               className="category-header__link--products text__body"
+              aria-label="Category title"
             >
               {categoryTitle}
             </Link>
@@ -60,6 +63,7 @@ export const CategoryHeader: React.FC<Props> = ({
                 to=".."
                 relative="path"
                 className="category-header__link--back text__body"
+                aria-label="Back"
               >
                 Back
               </Link>

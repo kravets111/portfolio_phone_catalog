@@ -36,6 +36,7 @@ export const Header = () => {
         <button
           className="header__content-button header__content-button--left"
           onClick={handlePrevSlide}
+          aria-label="Prev slide"
         ></button>
 
         <div className="header__content-slider">
@@ -64,6 +65,7 @@ export const Header = () => {
         <button
           className="header__content-button header__content-button--right"
           onClick={handleNextSlide}
+          aria-label="Next slide"
         ></button>
 
         <div className="header__content-dots">
@@ -74,6 +76,7 @@ export const Header = () => {
                 'header__content-dots--dot-active': index === currentSlide,
               })}
               onClick={() => setCurrentSlide(index)}
+              aria-label="Current slide"
             ></button>
           ))}
         </div>

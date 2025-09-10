@@ -54,6 +54,7 @@ export const ButtonCard: React.FC<Props> = ({ details, product }) => {
         )}
         onClick={handleAddToCart}
         disabled={isInCart}
+        aria-label="Add to cart"
       >
         {isInCart ? 'Added to cart' : 'Add to cart'}
       </button>
@@ -71,6 +72,7 @@ export const ButtonCard: React.FC<Props> = ({ details, product }) => {
           },
         )}
         onClick={handleFavoritesClick}
+        aria-label="Add to favorites"
       ></button>
     </div>
   );

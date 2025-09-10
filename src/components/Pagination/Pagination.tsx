@@ -49,6 +49,7 @@ export const Pagination: React.FC<Props> = ({
           transform: currentPage !== 1 ? 'rotate(180deg)' : 'none',
         }}
         onClick={() => onPageChange(currentPage - 1)}
+        aria-label="Prev page"
       ></button>
 
       {pages.map(page => (
@@ -58,6 +59,7 @@ export const Pagination: React.FC<Props> = ({
             'pagination__button-arrows--active': page === currentPage,
           })}
           onClick={() => onPageChange(page)}
+          aria-label="Current page"
         >
           {page}
         </button>
@@ -78,6 +80,7 @@ export const Pagination: React.FC<Props> = ({
           transform: currentPage === totalPages ? 'rotate(180deg)' : 'none',
         }}
         onClick={() => onPageChange(currentPage + 1)}
+        aria-label="Next page"
       ></button>
     </div>
   );

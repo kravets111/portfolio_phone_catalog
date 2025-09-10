@@ -36,6 +36,7 @@ export const Carousel: React.FC<Props> = ({ children }) => {
             backgroundImage: `url(img/icons/icon-arrow${canScrollLeft ? '-active' : ''}.svg)`,
           }}
           disabled={!canScrollLeft}
+          aria-label="Scroll left"
         ></button>
 
         <button
@@ -54,6 +55,7 @@ export const Carousel: React.FC<Props> = ({ children }) => {
             transform: !canScrollRight ? 'rotate(180deg)' : 'none',
           }}
           disabled={!canScrollRight}
+          aria-label="Scroll right"
         ></button>
       </div>
 

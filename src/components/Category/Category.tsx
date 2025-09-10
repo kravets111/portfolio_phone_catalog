@@ -38,15 +38,20 @@ export const Category = () => {
 
       <div className="category__content">
         {Categories.map(({ name, key, bgClass, imgClass }) => (
-          <Link to={`/${key}`} className="category__content-card" key={key}>
+          <Link
+            to={`/${key}`}
+            className="category__content-card"
+            key={key}
+            aria-label="Category"
+          >
             <div className={`category__content-card--image ${bgClass}`}>
               <div className={imgClass}></div>
             </div>
 
             <div className="category__content-card--text">
-              <h4 className="category__content-card--text-title text text__title--utility">
+              <p className="category__content-card--text-title text text__title--utility">
                 {name}
-              </h4>
+              </p>
 
               <p className="category__content-card--text-desc text text__body">
                 {count[key] ?? 0} models

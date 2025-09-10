@@ -14,20 +14,28 @@ export const TopBar = () => {
 
   return (
     <div className="top-bar">
-      <Link to="/" className="icon icon--logo top-bar__logo"></Link>
+      <Link
+        to="/"
+        className="icon icon--logo top-bar__logo"
+        aria-label="Logo"
+      ></Link>
 
-      <NavLink to="/menu" className="icon icon--menu top-bar__menu"></NavLink>
+      <NavLink
+        to="/menu"
+        className="icon icon--menu top-bar__menu"
+        aria-label="Menu"
+      ></NavLink>
 
       <div className="top-bar__nav">
         <NavBar />
       </div>
 
       <div className="top-bar__shopping">
-        <NavLink to="/favorites" className={heartClass}>
+        <NavLink to="/favorites" className={heartClass} aria-label="Favorites">
           <span className="top-bar__shopping-badge">{favorites.length}</span>
         </NavLink>
 
-        <NavLink to="/cart" className={bagClass}>
+        <NavLink to="/cart" className={bagClass} aria-label="Cart">
           <span className="top-bar__shopping-badge">{cart.length}</span>
         </NavLink>
       </div>
