@@ -8,6 +8,7 @@ import { Filters } from '../Filters';
 import { Card } from '../Card';
 import { Pagination } from '../Pagination';
 import { NotFoundProduct } from '../NotFoundProduct';
+import { Loader } from '../Loader';
 
 type Props = {
   category: 'phones' | 'tablets' | 'accessories';
@@ -48,7 +49,7 @@ export const ProductList: React.FC<Props> = ({ category, title }) => {
   } = useFilteredProducts(products);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (

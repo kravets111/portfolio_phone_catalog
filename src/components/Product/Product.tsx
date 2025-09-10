@@ -4,6 +4,7 @@ import { ProductType } from '../../types/ProductType';
 import { fetchProducts } from '../../api';
 import { Card } from '../Card';
 import { Carousel } from '../Carousel';
+import { Loader } from '../Loader';
 
 export const Product = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -26,39 +27,47 @@ export const Product = () => {
     loadProducts();
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <section className="product main__margin">
+    <section className="product">
       <div className="product__top">
         <h2 className="product__top-title text__title text__title--basic">
           Brand new models
         </h2>
       </div>
 
-      <Carousel>
-        {products.map(product => {
-          const { id, itemId, name, image, fullPrice, screen, capacity, ram } =
-            product;
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Carousel>
+          {products.map(product => {
+            const {
+              id,
+              itemId,
+              name,
+              image,
+              fullPrice,
+              screen,
+              capacity,
+              ram,
+            } = product;
 
-          return (
-            <Card
-              key={id}
-              id={itemId}
-              name={name}
-              image={image}
-              price={undefined}
-              fullPrice={fullPrice}
-              screen={screen}
-              capacity={capacity}
-              ram={ram}
-              category={'phones'}
-            />
-          );
-        })}
-      </Carousel>
+            return (
+              <Card
+                key={id}
+                id={itemId}
+                name={name}
+                image={image}
+                price={undefined}
+                fullPrice={fullPrice}
+                screen={screen}
+                capacity={capacity}
+                ram={ram}
+                category={'phones'}
+              />
+            );
+          })}
+        </Carousel>
+      )}
     </section>
   );
 };

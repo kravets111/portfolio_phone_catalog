@@ -30,7 +30,7 @@ export const Header = () => {
     <header className="header">
       <div className="header__content">
         <div className="header__content-text">
-          <h1 className="text text__title">Product Catalog</h1>
+          <h1 className="text text__title">Welcome to Nice Gadgets store!</h1>
         </div>
 
         <button

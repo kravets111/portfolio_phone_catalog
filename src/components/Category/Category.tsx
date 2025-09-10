@@ -31,7 +31,7 @@ export const Category = () => {
   }, []);
 
   return (
-    <section className="category main__margin">
+    <section className="category">
       <h2 className="category__title text text__title--basic">
         Shop by category
       </h2>

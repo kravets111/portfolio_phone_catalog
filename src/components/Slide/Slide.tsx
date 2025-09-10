@@ -31,6 +31,7 @@ export const Slide: React.FC<Props> = ({
           src={image}
           alt="slider-img"
           className="slide__image-phone"
+          decoding="async"
           loading="lazy"
         />
       </div>

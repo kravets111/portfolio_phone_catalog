@@ -19,6 +19,7 @@ import { Carousel } from '../Carousel';
 import { Card } from '../Card';
 import { CarouselProvider } from '../Carousel/CarouselContext';
 import { colorMap } from '../../utils/colorMap';
+import { Loader } from '../Loader';
 
 export const ProductDetails = () => {
   const { category, productId } = useParams<{
@@ -153,7 +154,7 @@ export const ProductDetails = () => {
       )}
 
       {!device ? (
-        <p>Loading...</p>
+        <Loader />
       ) : (
         <>
           <div className="product-details__main">

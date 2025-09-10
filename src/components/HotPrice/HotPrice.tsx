@@ -4,6 +4,7 @@ import { ProductType } from '../../types/ProductType';
 import { fetchProducts } from '../../api';
 import { Card } from '../Card';
 import { Carousel } from '../Carousel';
+import { Loader } from '../Loader';
 
 export const HotPrice = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -29,10 +30,6 @@ export const HotPrice = () => {
     loadProducts();
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <section className="hotprice main__margin">
       <div className="hotprice__top">
@@ -41,36 +38,40 @@ export const HotPrice = () => {
         </h2>
       </div>
 
-      <Carousel>
-        {products.map(product => {
-          const {
-            id,
-            itemId,
-            name,
-            image,
-            price,
-            fullPrice,
-            screen,
-            capacity,
-            ram,
-          } = product;
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Carousel>
+          {products.map(product => {
+            const {
+              id,
+              itemId,
+              name,
+              image,
+              price,
+              fullPrice,
+              screen,
+              capacity,
+              ram,
+            } = product;
 
-          return (
-            <Card
-              key={id}
-              id={itemId}
-              name={name}
-              image={image}
-              price={price}
-              fullPrice={fullPrice}
-              screen={screen}
-              capacity={capacity}
-              ram={ram}
-              category={'phones'}
-            />
-          );
-        })}
-      </Carousel>
+            return (
+              <Card
+                key={id}
+                id={itemId}
+                name={name}
+                image={image}
+                price={price}
+                fullPrice={fullPrice}
+                screen={screen}
+                capacity={capacity}
+                ram={ram}
+                category={'phones'}
+              />
+            );
+          })}
+        </Carousel>
+      )}
     </section>
   );
 };

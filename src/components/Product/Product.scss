@@ -3,6 +3,7 @@
 .product {
   position: relative;
   grid-column: 1 / 5;
+  height: auto;
 
   @include on-tablet {
     grid-column: 1 / 13;

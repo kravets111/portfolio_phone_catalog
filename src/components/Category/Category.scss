@@ -1,6 +1,7 @@
 @use '../../styles/utils' as *;
 
 .category {
+  height: auto;
   grid-column: 1 / 5;
   padding-inline: 16px;
 

@@ -2,15 +2,6 @@
 
 .header {
   height: max-content;
-  padding-bottom: 56px;
-
-  @include on-tablet {
-    padding-bottom: 64px;
-  }
-
-  @include on-desktop {
-    padding-bottom: 80px;
-  }
 
   &__content {
     display: flex;
@@ -26,7 +17,7 @@
     }
 
     @include on-laptop {
-      grid-template-rows: 176px 245px 1fr;
+      grid-template-rows: 224px 188px 1fr;
     }
 
     @include on-desktop {
@@ -42,13 +33,13 @@
         display: block;
         grid-column: 1 / 10;
         grid-row: 1;
-        padding: 0;
+        padding-block: 32px;
         margin-top: 0;
       }
 
       @include on-desktop {
         margin-top: 64px;
-        grid-column: 1 / 17;
+        grid-column: 1 / 19;
         padding-block: 56px;
       }
     }
