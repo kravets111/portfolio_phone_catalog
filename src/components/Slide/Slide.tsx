@@ -33,6 +33,7 @@ export const Slide: React.FC<Props> = ({
           className="slide__image-phone"
           decoding="async"
           loading="lazy"
+          {...{ fetchpriority: 'high' }}
         />
       </div>
     </div>

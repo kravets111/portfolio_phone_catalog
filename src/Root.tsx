@@ -13,7 +13,7 @@ import { CartProvider } from './components/Cart/CartContext';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export const Root = () => (
-  <Router>
+  <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     <FavoritesProvider>
       <CartProvider>
         <Routes>
